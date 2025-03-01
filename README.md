@@ -162,6 +162,7 @@ In this home lab, we will focus on implementing Security Groups, Mapped Drives, 
 <br> 
 
 19. Now, repeat the process on the HR folder:
+    
 
 1. Right-click on HR → select the Security tab → click Advanced.
 
@@ -194,12 +195,19 @@ This will allow HR group members to access the HR shared folder with the proper 
 
 21. To ensure the HR group can "Read/Write" in the sharing properties, follow these steps:
 
+
 1. Right-click on the HR folder.
-2. Select Properties and go to the Sharing tab.
-3. Click Share….
-4. In the Network Access window, ensure HR is listed.
-5. Right-click on HR and select Read/Write.
-6. Click Share to confirm the settings.
+   
+3. Select Properties and go to the Sharing tab.
+   
+5. Click Share….
+   
+7. In the Network Access window, ensure HR is listed.
+   
+8. Right-click on HR and select Read/Write.
+    
+9. Click Share to confirm the settings.
+    
    <br>
 This ensures that members of the HR group have the correct permissions to both read and write to the HR shared folder.
 
@@ -210,6 +218,7 @@ This ensures that members of the HR group have the correct permissions to both r
 <br>
 
 22. o check Bob's access to the HR folder on Desktop2:
+    
 
 1. Log in as Bob on the Desktop2 account.
 2. Open File Explorer.
@@ -224,11 +233,15 @@ Since Bob is part of the HR group, he should have access to this folder. You sho
 
 <br>
 
-23. - Copy the network path for the HR folder: \Server2022\HR
+23.
+
+- Copy the network path for the HR folder: \Server2022\HR
 - Right-click on This PC in File Explorer and select Map this Network drive.
 - In the Map Network Drive window:
+  
 -- Drive letter: Choose a drive letter, such as Z:
 -- Folder: Paste the network path \Server2022\HR into the folder field.
+
 - Check the box for Reconnect at sign-in if you want the drive to be remapped automatically on login.
 - Click Finish.
 
