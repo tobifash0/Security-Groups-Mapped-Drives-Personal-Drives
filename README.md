@@ -164,49 +164,39 @@ In this home lab, we will focus on implementing Security Groups, Mapped Drives, 
 19. Now, repeat the process on the HR folder:
     
 
-1. Right-click on HR → select the Security tab → click Advanced.
+- Right-click on HR → select the Security tab → click Advanced.
 
-2. Select Disable Inheritance → choose Convert inherited permissions....
+- Select Disable Inheritance → choose Convert inherited permissions....
 
-3. Delete the two Users permissions.
+- Delete the two Users permissions.
 
-4. Click Add, then Select a Principal, and add Helpdesk.
+- Click Add, then Select a Principal, and add Helpdesk.
 
-5. Enable Modify for basic permissions.
+- Enable Modify for basic permissions.
 
-6. Click OK, then Apply.
+- Click OK, then Apply.
 
 <br> 
 
 ![Screenshot 2025-03-01 at 12 09 17 AM](https://github.com/user-attachments/assets/426f3bd3-ed8a-4df7-a624-35cbf5df6b3b)
 
-<br> 
-
-
-20. Now, let's repeat the same process for the HR folder:
-
-1. Right-click on HR → select the Security tab → click Advanced.
-2. Click Add, then Select a Principal, and add HR.
-3. Enable Modify for basic permissions.
-4. Click OK, then Apply. <br>
-This will allow HR group members to access the HR shared folder with the proper permissions.
 
 <br> 
 
-21. To ensure the HR group can "Read/Write" in the sharing properties, follow these steps:
+20. To ensure the HR group can "Read/Write" in the sharing properties, follow these steps:
 
 
-1. Right-click on the HR folder.
+-  Right-click on the HR folder.
+
+- Select Properties and go to the Sharing tab.
    
-3. Select Properties and go to the Sharing tab.
+- Click Share….
    
-5. Click Share….
+- In the Network Access window, ensure HR is listed.
    
-7. In the Network Access window, ensure HR is listed.
-   
-8. Right-click on HR and select Read/Write.
+- Right-click on HR and select Read/Write.
     
-9. Click Share to confirm the settings.
+-  Click Share to confirm the settings.
     
    <br>
 This ensures that members of the HR group have the correct permissions to both read and write to the HR shared folder.
@@ -217,13 +207,13 @@ This ensures that members of the HR group have the correct permissions to both r
 
 <br>
 
-22. o check Bob's access to the HR folder on Desktop2:
+21. o check Bob's access to the HR folder on Desktop2:
     
 
-1. Log in as Bob on the Desktop2 account.
-2. Open File Explorer.
-3. In the File Explorer search bar, paste the following network path:\\Server2022\HR
-4. Press Enter to navigate to the HR shared folder.
+- Log in as Bob on the Desktop2 account.
+-  Open File Explorer.
+-   In the File Explorer search bar, paste the following network path:\\Server2022\HR
+-  Pess Enter to navigate to the HR shared folder.
 <br>
 Since Bob is part of the HR group, he should have access to this folder. You should be able to see the contents of the HR folder. If you followed the permissions setup correctly, Bob should have Read/Write access to this folder.
 
@@ -233,14 +223,14 @@ Since Bob is part of the HR group, he should have access to this folder. You sho
 
 <br>
 
-23.
+22.
 
 - Copy the network path for the HR folder: \Server2022\HR
 - Right-click on This PC in File Explorer and select Map this Network drive.
 - In the Map Network Drive window:
-  
--- Drive letter: Choose a drive letter, such as Z:
--- Folder: Paste the network path \Server2022\HR into the folder field.
+  <br>
+  - Drive letter: Choose a drive letter, such as Z:
+- Folder: Paste the network path \Server2022\HR into the folder field.
 
 - Check the box for Reconnect at sign-in if you want the drive to be remapped automatically on login.
 - Click Finish.
@@ -251,13 +241,13 @@ Since Bob is part of the HR group, he should have access to this folder. You sho
 
 <br>
 
-24. <br> 
+23. <br> 
 
 ![image](https://github.com/user-attachments/assets/2bead10b-f88d-4c90-9ac6-ccad9a7d01c8)
 
 <br>
 
-25. Another method to map a personal drive is by accessing your Windows Server 2022 account, copying the network path from the "Personal Properties" section in the shared folders.
+24. Another method to map a personal drive is by accessing your Windows Server 2022 account, copying the network path from the "Personal Properties" section in the shared folders.
 
 <br> 
 
@@ -265,7 +255,7 @@ Since Bob is part of the HR group, he should have access to this folder. You sho
 
 <br> 
 
-26. Next, open Active Directory Users and Computers, search for "Bob," right-click on his name, and select "Properties." Then, go to the "Profile" tab and under "Home Folder," choose "Connect" and set the drive letter to P:. Paste the network path for the drive: \SERVER2022\Personal%username% (make sure to include "%username%"). Finally, click "Apply." This will create a personal folder within Bob's directory.
+25. Next, open Active Directory Users and Computers, search for "Bob," right-click on his name, and select "Properties." Then, go to the "Profile" tab and under "Home Folder," choose "Connect" and set the drive letter to P:. Paste the network path for the drive: \SERVER2022\Personal%username% (make sure to include "%username%"). Finally, click "Apply." This will create a personal folder within Bob's directory.
 
 <br> 
 
@@ -273,7 +263,7 @@ Since Bob is part of the HR group, he should have access to this folder. You sho
 
 <br> 
 
-27. Once we log into Desktop2 as Bob, we will see that both the Personal and HR drives are mapped.
+26. Once we log into Desktop2 as Bob, we will see that both the Personal and HR drives are mapped.
 
 <br> 
 
