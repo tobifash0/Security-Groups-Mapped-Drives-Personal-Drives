@@ -230,7 +230,7 @@ Since Bob is part of the HR group, he should have access to this folder. You sho
 - In the Map Network Drive window:
   <br>
   - Drive letter: Choose a drive letter, such as Z:
-- Folder: Paste the network path \Server2022\HR into the folder field.
+  - Folder: Paste the network path \Server2022\HR into the folder field.
 
 - Check the box for Reconnect at sign-in if you want the drive to be remapped automatically on login.
 - Click Finish.
